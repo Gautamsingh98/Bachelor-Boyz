@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bachelor Boyz</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Login Overlay -->
+  <div id="loginOverlay" class="overlay">
+    <div class="login-card">
+      <h2>Student Login</h2>
+      <input type="text" id="username" placeholder="Enter your name">
+      <input type="email" id="email" placeholder="Enter your email">
+      <button onclick="login()">Login</button>
+    </div>
+  </div>
+
+<!-- Website Content -->
+<header>
+  <h1>🎓 BACHELOR BOYZ</h1>
+</header>
+
+<!-- NAVBAR -->
+<nav>
+  <ul>
+    <li><a href="#">HOME</a></li>
+
+    <!-- SYLLABUS -->
+    <li>
+      <button>SYLLABUS ▾</button>
+      <ul class="dropdown-content">
+        <li>
+          <a href="#">BIT ▸</a>
+          <ul class="submenu">
+            <li><a href="#" onclick="openSemester('BIT',1)">Semester 1</a></li>
+            <li><a href="#" onclick="openSemester('BIT',2)">Semester 2</a></li>
+            <li><a href="#" onclick="openSemester('BIT',3)">Semester 3</a></li>
+            <li><a href="#" onclick="openSemester('BIT',4)">Semester 4</a></li>
+            <li><a href="#" onclick="openSemester('BIT',5)">Semester 5</a></li>
+            <li><a href="#" onclick="openSemester('BIT',6)">Semester 6</a></li>
+            <li><a href="#" onclick="openSemester('BIT',7)">Semester 7</a></li>
+            <li><a href="#" onclick="openSemester('BIT',8)">Semester 8</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">BCA ▸</a>
+          <ul class="submenu">
+            <li><a href="#" onclick="openSemester('BCA',1)">Semester 1</a></li>
+            <li><a href="#" onclick="openSemester('BCA',2)">Semester 2</a></li>
+            <li><a href="#" onclick="openSemester('BCA',3)">Semester 3</a></li>
+            <li><a href="#" onclick="openSemester('BCA',4)">Semester 4</a></li>
+            <li><a href="#" onclick="openSemester('BCA',5)">Semester 5</a></li>
+            <li><a href="#" onclick="openSemester('BCA',6)">Semester 6</a></li>
+            <li><a href="#" onclick="openSemester('BCA',7)">Semester 7</a></li>
+            <li><a href="#" onclick="openSemester('BCA',8)">Semester 8</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">B.Tech (AI) ▸</a>
+          <ul class="submenu">
+            <li><a href="#" onclick="openSemester('BTech-AI',1)">Semester 1</a></li>
+            <li><a href="#" onclick="openSemester('BTech-AI',2)">Semester 2</a></li>
+            <li><a href="#" onclick="openSemester('BTech-AI',3)">Semester 3</a></li>
+            <li><a href="#" onclick="openSemester('BTech-AI',4)">Semester 4</a></li>
+            <li><a href="#" onclick="openSemester('BTech-AI',5)">Semester 5</a></li>
+            <li><a href="#" onclick="openSemester('BTech-AI',6)">Semester 6</a></li>
+            <li><a href="#" onclick="openSemester('BTech-AI',7)">Semester 7</a></li>
+            <li><a href="#" onclick="openSemester('BTech-AI',8)">Semester 8</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- NOTES -->
+    <li>
+      <button>NOTES ▾</button>
+      <ul class="dropdown-content">
+        <li>
+          <a href="#">BIT ▸</a>
+          <ul class="submenu">
+            <li><a href="#">Semester 1</a></li>
+            <li><a href="#">Semester 2</a></li>
+            <li><a href="#">Semester 3</a></li>
+            <li><a href="#">Semester 4</a></li>
+            <li><a href="#">Semester 5</a></li>
+            <li><a href="#">Semester 6</a></li>
+            <li><a href="#">Semester 7</a></li>
+            <li><a href="#">Semester 8</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">BCA ▸</a>
+          <ul class="submenu">
+            <li><a href="#">Semester 1</a></li>
+            <li><a href="#">Semester 2</a></li>
+            <li><a href="#">Semester 3</a></li>
+            <li><a href="#">Semester 4</a></li>
+            <li><a href="#">Semester 5</a></li>
+            <li><a href="#">Semester 6</a></li>
+            <li><a href="#">Semester 7</a></li>
+            <li><a href="#">Semester 8</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">B.Tech (AI) ▸</a>
+          <ul class="submenu">
+            <li><a href="#">Semester 1</a></li>
+            <li><a href="#">Semester 2</a></li>
+            <li><a href="#">Semester 3</a></li>
+            <li><a href="#">Semester 4</a></li>
+            <li><a href="#">Semester 5</a></li>
+            <li><a href="#">Semester 6</a></li>
+            <li><a href="#">Semester 7</a></li>
+            <li><a href="#">Semester 8</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- MODEL QUESTIONS -->
+    <li>
+      <button>MODEL QUESTIONS ▾</button>
+      <ul class="dropdown-content">
+        <li>
+          <a href="#">BIT ▸</a>
+          <ul class="submenu">
+            <li><a href="#">Semester 1</a></li>
+            <li><a href="#">Semester 2</a></li>
+            <li><a href="#">Semester 3</a></li>
+            <li><a href="#">Semester 4</a></li>
+            <li><a href="#">Semester 5</a></li>
+            <li><a href="#">Semester 6</a></li>
+            <li><a href="#">Semester 7</a></li>
+            <li><a href="#">Semester 8</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">BCA ▸</a>
+          <ul class="submenu">
+            <li><a href="#">Semester 1</a></li>
+            <li><a href="#">Semester 2</a></li>
+            <li><a href="#">Semester 3</a></li>
+            <li><a href="#">Semester 4</a></li>
+            <li><a href="#">Semester 5</a></li>
+            <li><a href="#">Semester 6</a></li>
+            <li><a href="#">Semester 7</a></li>
+            <li><a href="#">Semester 8</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">B.Tech (AI) ▸</a>
+          <ul class="submenu">
+            <li><a href="#">Semester 1</a></li>
+            <li><a href="#">Semester 2</a></li>
+            <li><a href="#">Semester 3</a></li>
+            <li><a href="#">Semester 4</a></li>
+            <li><a href="#">Semester 5</a></li>
+            <li><a href="#">Semester 6</a></li>
+            <li><a href="#">Semester 7</a></li>
+            <li><a href="#">Semester 8</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<section class="hero-section">
+  <div class="hero-text">
+    <h1>Full Guide<br>For BIT</h1>
+    <p>
+      Welcome to the journey to success in the field of Science and Technology. 
+      This website will guide you to learn the Bachelor's degree in Information 
+      and Technology. Here you will get all the best notes, and syllabus from the professionals in this field.
+    </p>
+    <button class="contact-btn">Contact</button>
+  </div>
+  <div class="hero-image">
+    <img src="image.png" alt="BIT Students">
+  </div>
+</section>
+
+<!-- FEATURES SECTION -->
+<section class="features-section">
+  <h2 class="features-title">Features</h2>
+  <div class="features-grid">
+    <div class="feature-card">
+      <i class="icon">📝</i>
+      <h3>NOTES</h3>
+      <p>Proper notes based on the syllabus.<br>
+      Highlighted with the exam point of view.</p>
+    </div>
+    <div class="feature-card">
+      <i class="icon">❓</i>
+      <h3>QUESTIONS</h3>
+      <p>All the previous year questions of all subjects are provided.</p>
+    </div>
+    <div class="feature-card">
+      <i class="icon">📘</i>
+      <h3>SYLLABUS</h3>
+      <p>Newly updated syllabus is provided with credit hours and practical marks.</p>
+    </div>
+  </div>
+</section>
+
+<br></br>
+<br></br>
+<section class="section_container contact_container" id="contact">
+    <div class="logo">BB</div>
+    <h2 class="section__header">Let's Grow Together!</h2>
+    <p class="section__description">
+      The best platform to learn IT degree.
+      With absolutely best syllabus and notes.
+    </p>
+<div class="social-icons">
+  <a href="#"><i class="ri-facebook-fill"></i></a>
+  <a href="#"><i class="ri-linkedin-fill"></i></a>
+  <a href="#"><i class="ri-youtube-fill"></i></a>
+  <a href="#"><i class="ri-instagram-line"></i></a>
+  <a href="#"><i class="ri-whatsapp-line"></i></a>
+</div>
+
+  </section>
+
+
+<footer>
+  <p>© 2025 Student Portal | BIT, BCA, B.Tech (AI)</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
